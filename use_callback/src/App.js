@@ -1,6 +1,6 @@
 
 import './App.css';
-import React, {useState, useCallBack} from 'react';
+import React, {useState, useCallback} from 'react';
 import List from './List';
 
 function App() {
@@ -16,9 +16,9 @@ function App() {
     console.log("change function")
   }
 
-  const getItems = () =>{
+  const getItems = useCallback(() =>{
     return [number, number +1, number+2]
-  }
+  },[number])
 
 
 
