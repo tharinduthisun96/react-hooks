@@ -20,8 +20,12 @@ function App() {
     return [number, number +1, number+2]
   },[number])
 
+  const getItems2 =() =>{ //render multiple times in List 
+    return [number, number +1, number+2]
+  }
 
 
+// <List getItems={getItems2}/>
   return (
     <div className="App">
       <button onClick={increment}>+</button>
@@ -31,6 +35,7 @@ function App() {
       <input onChange={(e)=>change(e.target.value)}></input>
 
       <List getItems={getItems}/>
+     
     </div>
   );
 }
